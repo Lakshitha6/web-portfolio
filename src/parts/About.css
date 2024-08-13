@@ -1,0 +1,140 @@
+*{
+    height: auto;
+}
+
+.header{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(20, 198, 55);
+    display: flex;
+    justify-content: center;
+}
+
+.details{
+    margin:6% 4% 4% 4%;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.about-image > img{
+    width: 450px;
+    height: 500px;
+    margin: 3%;
+    border-radius: 10px;
+}
+
+.my-info{
+    margin:2% 1% 1% 12%;
+}
+
+.my-info > p{
+    font-size: 20px;
+}
+
+.my-info > h2{
+    font-size:3rem;
+    color: rgb(197, 228, 25);
+    margin-left: 35%;
+}
+
+span{
+    color: aqua;
+}
+
+.skills{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.technology{
+    margin-right: 20%;
+}
+
+.technology > img{
+    width: 50%;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.technology > img:hover{
+    transform: translateY(-10px);
+}
+
+.about-image{
+    animation: bounce 4s linear infinite;
+    box-shadow: 1px 1px 5px 5px rgb(17, 227, 94) inset;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100%{
+        transform: translateY(-15px);
+    }
+}
+
+/*------------------------------------------responsive-----------------------------------*/
+
+
+@media screen and (max-width: 1000px){
+
+    .details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    .about-image{
+        width: 70%;
+        box-shadow:none;
+    }
+
+    .about-image img{
+        width: 90%;
+        height: 90%;
+    }
+
+    .skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 4%;
+    }
+
+    .my-info > h2{
+        font-size:2rem;
+        color: rgb(197, 228, 25);
+    }
+}
+
+@media screen and (max-width: 400px){
+ 
+    .my-info > h2{
+        margin-left: 25%;
+    }
+    .skills{
+        display: grid;
+        grid-template-columns: 1fr ;
+        margin-left: 25%;
+    }
+
+    .technology > img{
+        width: 40%;
+    }
+
+    .technology > img:hover{
+        transform: none;
+    }
+}

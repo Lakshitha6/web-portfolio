@@ -1,0 +1,134 @@
+.services{
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 4%;
+}
+
+.services-title{
+    position: relative;
+}
+
+.services-title h1{
+    padding: 0 30px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(20, 198, 55);
+}
+
+.services-format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+    border: 2px solid greenyellow;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.services-format h3{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.services-format h2{
+    font-size: 38px;
+    font-weight: 800;
+    background: rgb(111, 214, 154);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-format p{
+    font-size: 24px;
+    line-height: 40px;
+    max-width: 300px;
+}
+
+.services-readmore{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.services-readmore a{
+    font-size: 20px;
+    color:rgb(17, 227, 94);
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.services-format:hover{
+    border: 2px solid rgb(17, 227, 94);
+    box-shadow: 0 4px 30px rgb(38, 199, 16);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.services-readmore a:hover{
+    color: rgb(174, 0, 255);
+    font-size: 23px;
+}
+
+/*----------------------------------------------Responsive-------------------------------------*/
+
+@media screen and (max-width: 1000px){
+
+    .services-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    .services-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+ 
+    .services-format{
+        padding: 40px;
+    }
+
+    .services-container{
+        margin: 2%;
+    }
+
+    .services-format h2{
+        font-size: 25px;
+    }
+
+    .services-format p{
+        font-size: 15px;
+    }
+
+    .services-readmore a:hover{
+        font-size: 20px;
+    }
+
+    .services-format:hover{
+        box-shadow: none;
+        transform: none;
+    }
+    
+}
